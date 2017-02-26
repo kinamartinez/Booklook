@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/handlebars/dist/handlebars.js"></script>
+
+    <title>BookLook</title>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="page-header">
+            <h1>BookLook <i class="fa fa-eye" aria-hidden="true"></i></h1>
+        </div>
+
+        <div id="books">
+
+        </div>
+
+
+        <form class="book-form">
+            <h3>Search by ISBN</h3>
+
+            <div class="form-group">
+                <input type="text" id="isbn" placeholder="ISBN Number">
+                </input>
+            </div>
+
+            <button type="button" class="btn btn-primary search-isbn">Search</button>
+        </form>
+
+    </div>
+</div>
+
+<script id="templateBooks" type="text/x-handlebars-template">
+
+    <div class="book-with-isbn" data-id="{{myISBN}}" bookName="{{tittle}}">
+
+        <h1>{{tittle}}</h1>
+        <p> {{description}}</p>
+        <h2>Written by: {{authors}}</h2>
+        </span><img src="{{image}}"/></span>
+
+    </div>
+
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
+
